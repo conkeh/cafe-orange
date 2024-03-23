@@ -76,7 +76,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(/img/coffe-croissant.jpg);
+  background-image: url(img/coffe-croissant.jpg);
   background-image: no-repeat;
   background-size: cover;
   background-position: center;
