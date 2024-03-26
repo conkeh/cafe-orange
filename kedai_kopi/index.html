@@ -16,7 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
+    <!-- FEATHER ICONS -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <!--MY STYLES-->
     <link rel="stylesheet" href="styles.css" />
 
@@ -35,9 +36,9 @@
       </div>
       <div class="navbar-extra">
         <a href="#" id="search-button"
-          ><i class="fa-solid fa-magnifying-glass"></i
+          ><i class="fa fa-magnifying-glass"></i
         ></a>
-        <a href="#" id="shopping-cart"
+        <a href="#" id="shopping-cart-button"
           ><i class="fa-solid fa-cart-shopping"></i
         ></a>
         <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
@@ -45,11 +46,37 @@
       <!-- SEARCH FORM START -->
       <div class="search-form">
         <input type="search" id="search-box" placeholder="search here..." />
-        <label for="search-box"
-          ><i class="fa-solid fa-magnifying-glass"></i
-        ></label>
+        <label for="search-box"><i data-feather="search"></i></label>
       </div>
       <!-- SEARCH FORM END -->
+      <!-- SHOPPING CART START -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/products/coffeebag.jpg" alt="coffeebag" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">$15</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/coffeebag.jpg" alt="coffeebag" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">$15</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/coffeebag.jpg" alt="coffeebag" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">$15</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- SHOPPING CART END -->
     </nav>
     <!-- NAVBAR END -->
     <!-- HERO SECTION START-->
@@ -171,7 +198,9 @@
         <div class="product-card">
           <div class="product-icon">
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-eye"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
           </div>
           <div class="product-image">
             <img src="img/products/coffeebag.jpg" alt="" />
@@ -179,11 +208,11 @@
           <div class="product-content">
             <h3>Coffee Beans 1</h3>
             <div class="product-stars">
-              <i class="fa-regular fa-star" style="color: white"></i
-              ><i class="fa-regular fa-star" style="color: white"></i
-              ><i class="fa-regular fa-star" style="color: white"></i
-              ><i class="fa-regular fa-star" style="color: white"></i
-              ><i class="fa-regular fa-star"></i>
+              <i data-feather="star" class="filled"></i
+              ><i data-feather="star" class="filled"></i
+              ><i data-feather="star" class="filled"> </i
+              ><i data-feather="star" class="filled"></i
+              ><i data-feather="star"></i>
             </div>
             <div class="product-price">$15 <span>$21</span></div>
           </div>
@@ -284,8 +313,39 @@
       </div>
     </footer>
     <!-- FOOTER END -->
+    <!-- MODAL BOX ITEM DETAILS START-->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/coffeebag.jpg" alt="coffeebag" />
+          <div class="product-content">
+            <h3>Coffee Beans 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis,
+              dolorem unde earum temporibus nemo! A adipisci nihil odio natus
+              quo vitae laboriosam distinctio fuga?
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="filled"></i
+              ><i data-feather="star" class="filled"></i
+              ><i data-feather="star" class="filled"> </i
+              ><i data-feather="star" class="filled"></i
+              ><i data-feather="star"></i>
+            </div>
+            <div class="product-price">$15 <span>$21</span></div>
+            <a href="#"
+              ><i data-feather="shopping-cart"> </i><span>add to cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL BOX ITEM DETAILS END-->
     <!--  FEATHER ICONS-->
-
+    <script>
+      feather.replace();
+    </script>
     <script src="scripts.js"></script>
   </body>
 </html>
